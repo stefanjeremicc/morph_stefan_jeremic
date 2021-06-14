@@ -1,0 +1,49 @@
+###########
+# Task 1 - UI
+###########
+Create a form from the url: https://dribbble.com/shots/2371603-Form-Flow
+- Only mobile version of the form is required, it has to look good on both Android and iOS devices
+- Font Family - Roboto [https://fonts.google.com/specimen/Roboto]
+- Colors should be taken from the screenshot using some eyedropper tool
+- Animations doesn’t need to be identical, and it’s your choice if they are going to be
+implemented using JS or CSS
+- ”Submit” button should be added bellow as a part of your design improvisation
+- Its desirable but not required to use flexbox for the layou
+- Usage of external plugins is allowed
+- Usage of CSS frameworks is allowed
+- Usage of Tailwind css is a bonus!
+
+
+###########
+# Task 2a - Logic
+###########
+Create a function that takes the string parameter and returns true or false if the parentheses in the string
+are correctly matched and each one is accounted for. For example:
+If the input is (Welcome (to (Morph))), then the output should be true, but if the input is Welcome (to
+(the (Morph) then the output should be false, because the parentheses do not correctly match up.
+Edge case: if the input does not contain parentheses, return true.
+Examples:
+Input: "Lorem ((ipsum)(dolor)sit)"
+Output: true
+Input: "(Lorem (ipsum dolor)sit"
+Output: false
+
+###########
+# Task 2b - Logic
+###########
+Create a function that validates password and returns strong, medium, weak, based on the password
+strength. Check the strength of a password that user enters based on the following rules:
+➔ The password is at least 8 characters long
+➔ The password has at least one uppercase letter
+➔ The password has at least one lowercase letter
+➔ The password has at least one digit
+➔ The password has at least one special character
+Strong: if the password has at least one lowercase letter, one uppercase letter, one digit, one special
+character, and at least 8 characters.
+Medium: If the password is at least six characters long and meets all the other requirements, or has no digit
+but meets the rest of the requirements.
+Weak: If the password entered does not meet the strong or medium-level requirements, then it is deemed
+weak.
+Instructions for delivery
+When it comes to delivering results, it would be best to push it on github or bitbucket. It would be best to
+have 3 branches, one for each task.
