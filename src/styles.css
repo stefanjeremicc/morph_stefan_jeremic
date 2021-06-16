@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header {
+  @apply bg-primary text-white px-6 py-9 flex items-center;
+}
+
+.form_fieldwrap {
+  @apply mb-10 relative flex w-full items-center justify-start flex-row;
+}
+
+.form_input {
+  @apply outline-none border-b border-tertiary py-1.5 bg-secondary;
+}
+
+.form_section {
+  @apply max-w-sm m-auto;
+}
+
+.send_button {
+  @apply w-full p-2.5 rounded-xl block mt-4  text-white bg-gradient-to-br from-primary to-primary_2;
+}
+
+.send_button:focus {
+  @apply outline-none bg-gradient-to-br from-primary_2 to-primary;
+}
+
+.form_dec-number {
+  @apply min-w-70;
+}
+
+.form_fieldwrap-inner {
+  @apply w-full flex flex-col relative;
+}
+
+.form_input_span {
+  @apply w-0 h-px absolute left-0 bottom-0 bg-primary duration-200;
+}
+
+.form_input:focus {
+  @apply text-primary;
+}
+
+.form_input:focus + .form_input_span {
+  @apply w-full;
+}
+
+.check-mark_holder {
+  @apply bg-check-mark bg-no-repeat bg-contain bg-center-2 inline-block w-5 h-5 align-middle mr-3.5;
+}
+
+.animation_span {
+  @apply text-xs min-w-42 min-h-42 leading-7.5 rounded-circle p-1 block text-center relative;
+}
+
+.contact-field:checked + label .check-mark_holder {
+  @apply bg-primary_2 rounded-circle  transition-all duration-75;
+}
+
+.header_span {
+  @apply transition-all duration-75;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.header_span[data-fill='25'] {
+  background-color: rgb(70 213 181 / 25%);
+  color: #fff;
+}
+
+.header_span[data-fill='50'] {
+  background-color: rgb(70 213 181 / 50%);
+  color: #fff;
+}
+
+.header_span[data-fill='75'] {
+  background-color: rgb(70 213 181 / 75%);
+  color: #fff;
+}
+
+.header_span[data-fill='100'] {
+  background-color: rgb(70 213 181 / 100%);
+  color: #fff;
+}
+
+.animation_span:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  background-image: url(/public/assets/check-mark-v2.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #fff;
+  background-size: 20px 20px;
+}
+
+.animation_span.calculate:after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 375px) {
+  .header {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .py-7 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .header .header_span_wrapper {
+    margin-right: 0 !important;
+  }
+  .header .header_text_wrapper {
+    margin-top: 2px;
+  }
+  .form_dec-number {
+    min-width: 60px;
+  }
+}
